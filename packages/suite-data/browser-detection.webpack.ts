@@ -1,7 +1,7 @@
-const path = require('path');
+import path from 'path';
 
 module.exports = {
-    target: 'web',
+    target: 'browserslist',
     mode: 'production',
     entry: path.resolve(__dirname, './src/browser-detection/index.ts'),
     output: {
