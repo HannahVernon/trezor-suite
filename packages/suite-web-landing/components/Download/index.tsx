@@ -8,6 +8,7 @@ import { normalizeVersion } from '@suite-utils/build';
 import { SL_SIGNING_KEY, WIKI_HOW_TO_RUN } from '@suite-constants/urls';
 
 const StyledDropdown = styled(Dropdown)`
+    height: 100%;
     & ul {
         padding-top: 6px;
         padding-bottom: 6px;

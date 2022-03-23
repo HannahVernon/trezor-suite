@@ -1,6 +1,7 @@
 {
     "extends": "../../tsconfig.aliases.json",
     "compilerOptions": {
+        "target": "es5",
         "outDir": "./libDev",
         "lib": ["dom", "dom.iterable", "esnext"]
     },
