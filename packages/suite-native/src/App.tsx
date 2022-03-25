@@ -10,16 +10,10 @@ import {
     View,
 } from 'react-native';
 
-import {
-    Colors,
-    DebugInstructions,
-    Header,
-    LearnMoreLinks,
-    ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
 import TrezorConnect from 'trezor-connect';
 
-const Section = ({ children, title }) => {
+const Section = ({ children, title }: any) => {
     const isDarkMode = useColorScheme() === 'dark';
     return (
         <View style={styles.sectionContainer}>
@@ -56,10 +50,10 @@ const connectOptions = {
     },
 };
 
-const App = () => {
+export const App = () => {
     const isDarkMode = useColorScheme() === 'dark';
-    const [connectStatus, setConnectStatus] = useState('');
-    const [deviceState, setDeviceState] = useState('');
+    const [connectStatus, setConnectStatus] = useState<any>('');
+    const [deviceState, setDeviceState] = useState<any>('');
 
     const backgroundStyle = {
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -128,5 +122,3 @@ const styles = StyleSheet.create({
         fontWeight: '700',
     },
 });
-
-export default App;
