@@ -46,7 +46,7 @@ import signTransactionReplace from './signTransactionReplace';
 import signTransactionSegwit from './signTransactionSegwit';
 import signTransactionZcash from './signTransactionZcash';
 import stellarGetAddress from './stellarGetAddress';
-// import stellarSignTransaction from './stellarSignTransaction';
+import stellarSignTransaction from './stellarSignTransaction';
 import tezosGetAddress from './tezosGetAddress';
 import tezosGetPublicKey from './tezosGetPublicKey';
 import verifyMessage from './verifyMessage';

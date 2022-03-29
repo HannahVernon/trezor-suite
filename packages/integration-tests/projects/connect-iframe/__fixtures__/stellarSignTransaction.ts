@@ -2,15 +2,15 @@
 
 import commonFixtures from '../../../../../submodules/trezor-common/tests/fixtures/stellar/sign_tx.json';
 import {
-    Enum_StellarMemoType,
-    Enum_StellarAssetType,
-    Enum_StellarSignerType,
-} from '../../src/js/types/trezor/protobuf';
+    StellarMemoType,
+    StellarAssetType,
+    StellarSignerType,
+} from 'trezor-connect/lib/typescript/trezor/protobuf';
 
 // operations are in protobuf format (snake_case)
 
 const transformAsset = asset => ({
-    type: Enum_StellarAssetType[asset.type],
+    type: StellarAssetType[asset.type],
     code: asset.code,
     issuer: asset.issuer,
 });
@@ -126,7 +126,7 @@ const transformOperation = op => {
                 homeDomain: op.home_domain,
                 inflationDest: op.inflation_destination_account,
                 signer: {
-                    type: Enum_StellarSignerType[op.signer_type],
+                    type: StellarSignerType[op.signer_type],
                     key: op.signer_key,
                     weight: op.signer_weight,
                 },
@@ -185,7 +185,7 @@ export default {
                         maxTime: parameters.tx.timebounds_end,
                     },
                     memo: {
-                        type: Enum_StellarMemoType[parameters.tx.memo_type],
+                        type: StellarMemoType[parameters.tx.memo_type],
                         text: parameters.tx.memo_text,
                         id: parameters.tx.memo_id,
                         hash: parameters.tx.memo_hash,
