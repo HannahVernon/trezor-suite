@@ -1,8 +1,12 @@
 {
     "extends": "../../tsconfig.json",
-    "compilerOptions": { "outDir": "libDev" },
+    "compilerOptions": {
+        "outDir": "libDev",
+        "types": ["chrome", "jest", "node"]
+    },
     "references": [
-        { "path": "../transport" },
-        { "path": "../blockchain-link" }
+        { "path": "../blockchain-link" },
+        { "path": "../rollout" },
+        { "path": "../transport" }
     ]
 }
