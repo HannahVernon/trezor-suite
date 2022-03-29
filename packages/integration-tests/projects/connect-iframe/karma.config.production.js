@@ -7,7 +7,8 @@ const webpack = require('webpack');
 const getTestPattern = () => {
     const basename = __filename.split('/').reverse()[0];
     // yarn test:karma:production ...pattern => argv: [node, karma, start, config-file, ...pattern]
-    const pos = process.argv.indexOf(basename);
+    // todo: this is stupid
+    const pos = process.argv.indexOf(`projects/connect-iframe/${basename}`);
     if (pos > 0) {
         return process.argv.slice(pos + 1).map(f => `./tests/**/${f}.test.ts`);
     }
