@@ -1,9 +1,9 @@
-import { NETWORK_IDS, PROTOCOL_MAGICS } from '../../src/js/constants/cardano';
+import { NETWORK_IDS, PROTOCOL_MAGICS } from 'trezor-connect/lib/constants/cardano';
 import {
-    Enum_CardanoAddressType as CardanoAddressType,
-    Enum_CardanoCertificateType as CardanoCertificateType,
-    Enum_CardanoTxSigningMode as CardanoTxSigningMode,
-} from '../../src/js/types/trezor/protobuf';
+    CardanoAddressType,
+    CardanoCertificateType,
+    CardanoTxSigningMode,
+} from '@trezor/transport/lib/types/messages';
 
 // vectors from https://github.com/trezor/trezor-firmware/tree/master/python/trezorlib/tests/device_tests/test_msg_cardano_sign_transaction.py
 

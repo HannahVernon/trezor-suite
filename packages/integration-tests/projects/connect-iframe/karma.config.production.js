@@ -9,10 +9,10 @@ const getTestPattern = () => {
     // yarn test:karma:production ...pattern => argv: [node, karma, start, config-file, ...pattern]
     const pos = process.argv.indexOf(basename);
     if (pos > 0) {
-        return process.argv.slice(pos + 1).map(f => `./tests/**/${f}.test.js`);
+        return process.argv.slice(pos + 1).map(f => `./tests/**/${f}.test.ts`);
     }
 
-    return ['./tests/**/*.test.js'];
+    return ['./tests/**/*.test.ts'];
 };
 
 module.exports = config => {
@@ -50,7 +50,7 @@ module.exports = config => {
             './__txcache__/index.js': 'TxCachePreprocessor', // use custom preprocessor from karma.plugin
             // // todo
             './data/coins.json': 'WsCachePreprocessor', // use custom preprocessor from karma.plugin
-            './**/*.test.js': 'webpack',
+            './**/*.test.ts': 'webpack',
         },
         files: [
             { pattern: './karma.setup.js', watched: false },
@@ -72,17 +72,30 @@ module.exports = config => {
             module: {
                 rules: [
                     // todo: probably should not be needed
-                    {
-                        test: /\.js?$/,
-                        exclude: /node_modules/,
-                        use: ['babel-loader'],
-                    },
+                    // {
+                    //     test: /\.js?$/,
+                    //     exclude: /node_modules/,
+                    //     use: ['babel-loader'],
+                    // },
                     {
                         test: /\.ts?$/,
-                        exclude: /ts_modules/,
-                        use: ['babel-loader'],
+                        exclude: /node_modules/,
+                        use: [
+                            {
+                                loader: 'ts-loader',
+                                options: {
+                                    transpileOnly: true,
+                                    // configFile: '../../tsconfig.json',
+                                },
+                            },
+                        ],
                     },
                 ],
+            },
+            resolve: {
+                // todo: ?
+                modules: ['node_modules'],
+                extensions: ['.ts', '.js'],
             },
             plugins: [
                 // provide fallback plugins, Buffer and process are used in fixtures

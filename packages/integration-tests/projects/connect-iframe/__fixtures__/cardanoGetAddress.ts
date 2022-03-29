@@ -1,5 +1,5 @@
-import { NETWORK_IDS, PROTOCOL_MAGICS } from '../../src/js/constants/cardano';
-import { Enum_CardanoAddressType as CardanoAddressType } from '@trezor/transport';
+import { NETWORK_IDS, PROTOCOL_MAGICS } from 'trezor-connect/lib/constants/cardano';
+import { CardanoAddressType } from '@trezor/transport/lib/types/messages';
 
 const legacyResults = [
     {

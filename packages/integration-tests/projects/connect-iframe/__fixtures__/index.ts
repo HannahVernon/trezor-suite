@@ -7,10 +7,10 @@ import getPublicKey from './getPublicKey';
 import rippleGetAddress from './rippleGetAddress';
 import rippleSignTransaction from './rippleSignTransaction';
 import binanceSignTransaction from './binanceSignTransaction';
-// import cardanoGetAddress from './cardanoGetAddress';
+import cardanoGetAddress from './cardanoGetAddress';
 import cardanoGetPublicKey from './cardanoGetPublicKey';
-// import cardanoGetNativeScriptHash from './cardanoGetNativeScriptHash';
-// import cardanoSignTransaction from './cardanoSignTransaction';
+import cardanoGetNativeScriptHash from './cardanoGetNativeScriptHash';
+import cardanoSignTransaction from './cardanoSignTransaction';
 import composeTransaction from './composeTransaction';
 import eosGetPublicKey from './eosGetPublicKey';
 import eosSignTransaction from './eosSignTransaction';
@@ -70,10 +70,10 @@ let fixtures = [
     applyFlags,
     applySettings,
     binanceSignTransaction,
-    // cardanoGetAddress,
-    // cardanoGetNativeScriptHash,
-    // cardanoGetPublicKey,
-    // cardanoSignTransaction,
+    cardanoGetAddress,
+    cardanoGetNativeScriptHash,
+    cardanoGetPublicKey,
+    cardanoSignTransaction,
     composeTransaction,
     eosGetPublicKey,
     eosSignTransaction,
@@ -84,7 +84,7 @@ let fixtures = [
     ethereumSignTransactionEip155,
     ethereumSignTransactionEip1559,
     // todo: maybe something new that does not work for 2.4.3?
-    // ethereumSignTypedData,
+    ethereumSignTypedData,
     ethereumVerifyMessage,
     getAccountInfo,
     getAddress,

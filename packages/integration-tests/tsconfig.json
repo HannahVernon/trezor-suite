@@ -6,9 +6,12 @@
             "trezor-connect",
             "cypress",
             "cypress-wait-until"
-        ]
+        ],
+        "noEmit": true
     },
     "include": ["**/*.ts"],
-    "exclude": [],
-    "references": [{ "path": "../utils" }]
+    "references": [
+        { "path": "../transport" },
+        { "path": "../utils" }
+    ]
 }
