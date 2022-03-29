@@ -1,1 +1,7 @@
-export * from 'trezor-connect';
+import TrezorConnect from 'trezor-connect';
+
+export default TrezorConnect;
+
+export { Messages as ProtobufMessages } from '@trezor/transport';
+export * from './constants';
+export * from './types';
