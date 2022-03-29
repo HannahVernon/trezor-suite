@@ -79,6 +79,8 @@ describe(`TrezorConnect methods`, () => {
                             });
                         }
 
+                        console.log('======= expected', expected);
+
                         expect(result).toMatchObject(expected);
                         // done();
                     },
