@@ -6,8 +6,8 @@ import {
     StatusBar,
     StyleSheet,
     Text,
-    useColorScheme,
     View,
+    useColorScheme,
 } from 'react-native';
 
 import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
