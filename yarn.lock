@@ -4712,6 +4712,20 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
+"@trezor/blockchain-link@^2.1.1":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@trezor/blockchain-link/-/blockchain-link-2.1.2.tgz#ddee071c8f6f2f68bed27390fd736a1c1d10f1f0"
+  integrity sha512-n93EOktYHT5V25SGEeNpxkA5f/LYJKGngRSgY0zzuQy3yW8/kLgAXrF+txuMwhoapiem3EODzLJtqvSoxWxy7A==
+  dependencies:
+    "@trezor/utils" "^1.0.0"
+    "@trezor/utxo-lib" "^1.0.0"
+    "@types/web" "^0.0.51"
+    bignumber.js "^9.0.1"
+    events "^3.3.0"
+    ripple-lib "1.10.0"
+    socks-proxy-agent "6.1.1"
+    ws "7.4.6"
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@tsconfig/node10/-/node10-1.0.8.tgz#c1e4e80d6f964fbecb3359c43bd48b40f7cadad9"
