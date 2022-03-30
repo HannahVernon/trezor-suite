@@ -314,6 +314,8 @@ class BlockchainLink extends EventEmitter {
     };
 
     dispose() {
+        if (this.throttleBlockEvent) clearTimeout(this.throttleBlockEvent);
+
         this.removeAllListeners();
         const { worker } = this;
         if (worker) {
